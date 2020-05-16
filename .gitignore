@@ -6,3 +6,5 @@
 /.vs/slnx.sqlite
 .env
 env/
+
+rootkey.csv
