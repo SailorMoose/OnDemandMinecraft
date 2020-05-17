@@ -109,7 +109,7 @@ In the SSH client, create a folder in the current directory with the command:
 	<code>mkdir screens</code>
 7. Then execute the following command:
    <code>chmod 700 /home/ubuntu</code>
-8. Then add following line to /home/ubuntu/.bashrc:
+8. Then add following line to /home/ubuntu/.bash_profile:
   <code>export SCREENDIR=/home/ubuntu/screens</code>
 9. Then execute the command:
   <code>sudo crontab /home/ubuntu/crontab -u ubuntu</code>
