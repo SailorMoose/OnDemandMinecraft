@@ -106,10 +106,10 @@ This step will configure the AWS Linux server to run the minecraft server. It wi
 6. Using the FTP client, create a new folder in the root directory of the current user called **screens**  
 OR  
 In the SSH client, create a folder in the current directory with the command:
-	<code>sudo mkdir screens</code>
+	<code>mkdir screens</code>
 7. Then execute the following command:
-   <code>sudo chmod 700 /home/ubuntu</code>
-8. Then execute the next command:
+   <code>chmod 700 /home/ubuntu</code>
+8. Then add following line to /home/ubuntu/.bashrc:
   <code>export SCREENDIR=/home/ubuntu/screens</code>
 9. Then execute the command:
   <code>sudo crontab /home/ubuntu/crontab -u ubuntu</code>
