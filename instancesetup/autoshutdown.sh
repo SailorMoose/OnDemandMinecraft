@@ -8,7 +8,7 @@ if ps ax | grep -v grep | grep $SERVICE > /dev/null; then
 	sleep 5
 	$(screen -S minecraft -p 0 -X stuff "list^M")
 	sleep 5
-	#PLAYERSLIST=$(tail -n 1 /home/ubuntu/logs/latest.log | cut -f2 -d"/" | cut -f2 -d":") #minecraft 1.13+
+	#PLAYERSLIST=$(tail -n 1 /home/ubuntu/logs/latest.log | cut -f2 -d"/" | cut -f2 -d":") #minecraft newer than 1.12
 	PLAYERSLIST=$(tail -n2 /home/ubuntu/logs/latest.log | head -n1 | cut -f4 -d":" | cut -f2 -d":") #minecraft 1.12 forge
 	echo $PLAYERSLIST
 	if [ "$PLAYERSLIST" = "$PLAYERSEMPTY" ] || [ "$PLAYERSLIST" = "$PLAYERSEMPTY2" ] || [ "$PLAYERSLIST" = "$PLAYERSEMPTY3" ]
