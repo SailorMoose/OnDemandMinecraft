@@ -59,7 +59,7 @@ def initServerCommands(instanceIp):
 
         # Execute a command(cmd) after connecting/ssh to an instance
         stdin, stdout, stderr = sshClient.exec_command(
-            "screen -dmS minecraft bash -c 'java " + os.getenv('MEMORY_ALLOCATION', '') + "-Xmx2G -XX:MaxMetaspaceSize=256M -jar server.jar nogui'")
+            "screen -dmS minecraft bash -c 'java " + os.getenv('MEMORY_ALLOCATION', '') + " -jar server.jar nogui'") #-Xmx2G -XX:MaxMetaspaceSize=256M
         print('Starting minecraft', flush=True)
         # close the client connection once the job is done
         sshClient.close()
